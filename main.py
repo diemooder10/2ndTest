@@ -4,5 +4,10 @@
 
 #2
 
+def hab(a,b):
+  return a+b
+
+
+
 
 #2
