@@ -8,9 +8,9 @@ print("I'm line 7!")
 
 print("I'm on line 9!")
 #2
-
-
-
+print(1)
+print(2)
+print(3)
 
 
 
@@ -18,8 +18,9 @@ print("I'm on line 9!")
 
 
 #3
-
-
+print("4444444")
+print("55555")
+print("66666")
 
 
 
