@@ -1,13 +1,13 @@
 #파일 입출력 및 관련 데이터 리스트,딕셔너리화
 import csv
 
-def dataGetter(year): #디에고의 수정 년별도 기능 추가
-    with open(f'{year}1231.csv') as f:
-        reader = csv.reader(f)
-        header = reader.__next__()
-        data = [row for row in reader]
-        # 첫 줄 분리하기(헤더이므로)
-
+def dataGetter(): #디에고의 수정 년별도 기능 추가
+    file_name = f"20231231.csv"
+    with open(file_name, mode="r", encoding="EUC-KR") as f:
+            reader = csv.reader(f)
+            header = next(reader)  # 첫 번째 줄 헤더 읽기
+            data = [row for row in reader]  # 나머지 데이터 읽기
+        
     result = {}
     for row in data:
         subject = row[1]  # 현재 과목명
