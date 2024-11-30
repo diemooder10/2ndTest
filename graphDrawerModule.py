@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 
 #그래프를 그리는 함수 (과목 이름과 년 받음)
-def drawGraph(subject):
+def drawGraph(subject,year):
     #한글 잘 표시하려고 font를 바꾸기
     rc("font", family="AppleGothic")
 
     #데이터 얻기
-    data = dataModule.dataGetter()
+    data = dataModule.dataGetter(year)
 
     #부탁한 과목 없으면...
     if(subject not in data):
@@ -29,7 +29,7 @@ def drawGraph(subject):
     # 그래프의 문자들
     plt.xlabel("표준편차")
     plt.ylabel("사람 수")
-    plt.title(f"2023학년도 수능 {subject}과목 분포")
+    plt.title(f"{year}학년도 수능 {subject} 과목 분포")
     plt.legend()
     plt.grid()
 
