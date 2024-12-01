@@ -2,7 +2,7 @@
 import csv
 
 def dataGetter(year): #디에고의 수정 년별도 기능 추가
-    file_name = f"2ndTest/{year}1231.csv"
+    file_name = f"{year}1231.csv"
     with open(file_name, mode="r", encoding="EUC-KR") as f:
             reader = csv.reader(f)
             header = next(reader)  # 첫 번째 줄 헤더 읽기
