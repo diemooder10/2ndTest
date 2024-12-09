@@ -2,6 +2,7 @@ import dataModule
 import matplotlib.pyplot as plt
 from matplotlib import rc
 from matplotlib import font_manager
+import numpy as np
 
 #그래프를 그리는 함수 (과목 이름과 년 받음)
 def drawGraph(subject,year):
@@ -28,8 +29,8 @@ def drawGraph(subject,year):
 
     # 그래프를 설정하기
     plt.figure(figsize=(15, 7))
-    plt.plot(standard_score, man, label="남자", marker="o", linestyle="-")
-    plt.plot(standard_score, woman, label="여자", marker="o", linestyle="-")
+    plt.bar(standard_score, np.maximum(man,woman), label="남자")
+    plt.bar(standard_score,np.minimum(man,woman), label="여자")
 
     # 그래프의 문자들
     plt.xlabel("표준편차")
